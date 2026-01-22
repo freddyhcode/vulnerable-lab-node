@@ -1,4 +1,4 @@
-// [A05] Login Timing Attack
+// [OWASP A05:2025] Timing Attack
 export const login = async (req, res) => {
   const { email, password } = req.body;
 
@@ -14,7 +14,7 @@ export const login = async (req, res) => {
   return res.status(401).json({ error: "Invalid credentials" });
 };
 
-// [A03] Register Rate Limit Bypass
+// [OWASP A03:2025] Rate Limit Bypass
 const registerIPs = {};
 export const register = (req, res) => {
   const ip = req.headers["x-forwarded-for"] || req.socket.remoteAddress;

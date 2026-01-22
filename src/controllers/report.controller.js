@@ -1,4 +1,4 @@
-// [A03] PDF Generation DoS (Resource Exhaustion)
+// [OWASP A03:2025] Resource Exhaustion (DoS)
 let serverLoad = 0;
 export const reports = async (req, res) => {
   serverLoad += 50;

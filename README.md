@@ -58,7 +58,7 @@ El servidor iniciará en: `http://localhost:3000`
 
 ### Detalle de Vulnerabilidades
 
-#### 1. Login Timing Attack
+#### 1. Timing Attack
 
 El endpoint tarda significativamente más cuando el usuario existe (`admin@empresa.com`), sumulando consulta a una base de datos.
 

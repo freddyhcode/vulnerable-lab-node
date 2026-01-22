@@ -1,4 +1,4 @@
-// [A03] Inventory Race Condition
+// [OWASP A03:2025] Inventory Race Condition
 let stock = 1;
 export const buy = async (req, res) => {
   if (stock > 0) {

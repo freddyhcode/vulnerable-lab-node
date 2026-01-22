@@ -60,7 +60,7 @@ El servidor iniciará en: `http://localhost:3000`
 
 #### 1. Login Timing Attack
 
-El endpoint tarda significativamente más cuando el usuario existe (`admin@empresa.com`), sumulando consulada a una base de datos.
+El endpoint tarda significativamente más cuando el usuario existe (`admin@empresa.com`), sumulando consulta a una base de datos.
 
 ```http
 POST /api/v1/user/login

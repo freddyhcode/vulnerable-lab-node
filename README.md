@@ -64,7 +64,10 @@ El endpoint tarda significativamente más cuando el usuario existe (`admin@empre
 
 ```http
 POST /api/v1/user/login
-{ "email": "admin@empresa.com", "password": "123456" }
+{
+  "email": "admin@empresa.com",
+  "password": "123456"
+}
 ```
 
 #### 2. Inventory Race Condition

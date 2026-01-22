@@ -47,12 +47,12 @@ El servidor iniciará en: `http://localhost:3000`
 
 ### Resumen de Endpoints
 
-| Método | Endpoint                | Vulnerabilidad (OWASP 2025)         | Descripción                            |
-| :----- | :---------------------- | :---------------------------------- | :------------------------------------- |
-| POST   | `/api/v1/user/login`    | **[A05] Broken Authentication**     | Timing Attack (Username Enumeration).  |
-| POST   | `/api/v1/shop/buy`      | **[A03] Security Misconfiguration** | Race Condition en stock de inventario. |
-| POST   | `/api/v1/user/register` | **[A03] Security Misconfiguration** | Rate Limit Bypass vía IP Spoofing.     |
-| GET    | `/api/v1/reports`       | **[A03] Resource Consumption**      | DoS por latencia acumulativa.          |
+| Método | Endpoint             | Vulnerabilidad (OWASP 2025)         | Descripción                            |
+| :----- | :------------------- | :---------------------------------- | :------------------------------------- |
+| POST   | `/api/user/login`    | **[A05] Broken Authentication**     | Timing Attack (Username Enumeration).  |
+| POST   | `/api/shop/buy`      | **[A03] Security Misconfiguration** | Race Condition en stock de inventario. |
+| POST   | `/api/user/register` | **[A03] Security Misconfiguration** | Rate Limit Bypass vía IP Spoofing.     |
+| GET    | `/api/reports`       | **[A03] Resource Consumption**      | DoS por latencia acumulativa.          |
 
 ---
 
@@ -63,7 +63,7 @@ El servidor iniciará en: `http://localhost:3000`
 El endpoint tarda significativamente más cuando el usuario existe (`admin@empresa.com`), sumulando consulada a una base de datos.
 
 ```http
-POST /api/v1/user/login
+POST /api/user/login
 {
   "email": "admin@empresa.com",
   "password": "123456"
@@ -75,7 +75,7 @@ POST /api/v1/user/login
 El stock se verifica y se resta en pasos separados con una latencia artificial, permitiendo comprar más items de los disponibles con concurrencia.
 
 ```http
-POST /api/v1/shop/buy
+POST /api/shop/buy
 ```
 
 #### 3. Rate Limit Bypass
@@ -83,7 +83,7 @@ POST /api/v1/shop/buy
 El limitador de peticiones confía ciegamente en el header `X-Forwarded-For`, permitiendo bypass mediante rotación de IPs falsas.
 
 ```http
-POST /api/v1/user/register
+POST /api/user/register
 X-Forwarded-For: 1.2.3.4
 ```
 
@@ -92,5 +92,5 @@ X-Forwarded-For: 1.2.3.4
 Causa una denegación de servicio (DoS) por acumulación de latencia en el servidor. Cada petición aumenta la carga simulada global.
 
 ```http
-GET /api/v1/reports
+GET /api/reports
 ```

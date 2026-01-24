@@ -12,7 +12,7 @@
 
 </div>
 
-Laboratorio API minimalista diseñado intencionalmente con fallos de seguridad. Sirve como objetivo de pruebas para el scanner **PackOfKittens**.
+Laboratorio API minimalista diseñado intencionalmente con fallos de seguridad. Sirve como objetivo de pruebas.
 
 > [!NOTE]
 > **Notas:**

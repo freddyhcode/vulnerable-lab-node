@@ -2,6 +2,12 @@
   "name": "vulnerable-lab-node",
   "version": "1.0.0",
   "description": "Lab vulnerable para pruebas",
+  "author": "freddyhcode",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/freddyhcode/vulnerable-lab-node.git"
+  },
   "main": "index.js",
   "type": "module",
   "scripts": {

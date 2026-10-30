@@ -94,3 +94,7 @@ Causa una denegación de servicio (DoS) por acumulación de latencia en el servi
 ```http
 GET /api/reports
 ```
+
+## Licencia
+
+MIT
